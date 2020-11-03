@@ -98,7 +98,8 @@
           "builder": "@nrwl/workspace:run-commands",
           "options": {
             "commands": [
-              "nx build --target=app-example --prod --output-path docs/app-example --base-href /test-pages/app-example"
+              "nx build --target=app-example --prod --output-path docs/app-example --base-href /test-pages/app-example",
+              "ngh --dir=docs"
             ],
             "parallel": false
           }

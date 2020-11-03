@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "new-app",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Library name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "plugin": {
+      "type": "string",
+      "description": "Provide the library plugin",
+      "x-prompt": {
+        "message": "Which type of library would you like to generate?",
+        "type": "list",
+        "items": [
+          {
+            "value": "angular",
+            "label": "Angular"
+          },
+          {
+            "value": "node",
+            "label": "Node"
+          },
+          {
+            "value": "react",
+            "label": "React"
+          }
+        ]
+      }
+    }
+  },
+  "required": ["name"]
+}
