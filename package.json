@@ -1,0 +1,41 @@
+{
+  "name": "test-pages",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "nx": "test-pages/node_modules/.bin/nx",
+    "start": "test-pages/node_modules/.bin/nx serve",
+    "build": "test-pages/node_modules/.bin/nx build",
+    "test": "test-pages/node_modules/.bin/nx test",
+    "lint": "test-pages/node_modules/.bin/nx workspace-lint && nx lint",
+    "e2e": "test-pages/node_modules/.bin/nx e2e",
+    "affected:apps": "test-pages/node_modules/.bin/nx affected:apps",
+    "affected:libs": "test-pages/node_modules/.bin/nx affected:libs",
+    "affected:build": "test-pages/node_modules/.bin/nx affected:build",
+    "affected:e2e": "test-pages/node_modules/.bin/nx affected:e2e",
+    "affected:test": "test-pages/node_modules/.bin/nx affected:test",
+    "affected:lint": "test-pages/node_modules/.bin/nx affected:lint",
+    "affected:dep-graph": "test-pages/node_modules/.bin/nx affected:dep-graph",
+    "affected": "test-pages/node_modules/.bin/nx affected",
+    "format": "test-pages/node_modules/.bin/nx format:write",
+    "format:write": "test-pages/node_modules/.bin/nx format:write",
+    "format:check": "test-pages/node_modules/.bin/nx format:check",
+    "update": "test-pages/node_modules/.bin/nx migrate latest",
+    "workspace-schematic": "test-pages/node_modules/.bin/nx workspace-schematic",
+    "dep-graph": "test-pages/node_modules/.bin/nx dep-graph",
+    "help": "test-pages/node_modules/.bin/nx help"
+  },
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@nrwl/cli": "10.3.1",
+    "@nrwl/workspace": "10.3.1",
+    "@types/node": "~8.9.4",
+    "dotenv": "6.2.0",
+    "ts-node": "~7.0.0",
+    "tslint": "~6.0.0",
+    "eslint": "7.10.0",
+    "typescript": "~4.0.3",
+    "prettier": "2.0.4"
+  }
+}
