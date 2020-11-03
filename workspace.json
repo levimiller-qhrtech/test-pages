@@ -93,6 +93,15 @@
             "jestConfig": "apps/app-example/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "release": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              "nx build --target=app-example --prod --output-path docs/app-example --base-href /medeo-shared-services/"
+            ],
+            "parallel": false
+          }
         }
       }
     },
