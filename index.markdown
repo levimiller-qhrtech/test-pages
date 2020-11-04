@@ -4,12 +4,10 @@ exclude: true
 ---
 
 {% for page in site.html_pages %}
-<ul>
   {% if page.exclude != true %}
-<li class="item">
+<div class="item">
   <a href="{{site.baseurl}}{{ page.url }}">{{page.title}}</a>
   <p>{{page.description}}</p>
-</li>
+</div>
   {% endif %}
-</ul>
 {% endfor %}
