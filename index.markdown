@@ -1,13 +1,13 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
+exclude: true
 ---
 
-{% for page in site.pages %}
+{% for page in site.html_pages %}
+  {% if page.exclude != true %}
 <div class="item">
   <a href="{{page.url}}">{{page.title}}</a>
   <p>{{page.description}}</p>
 </div>
+  {% endif %}
 {% endfor %}
