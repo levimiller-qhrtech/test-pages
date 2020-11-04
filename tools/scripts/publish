@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ $# -ne 1 ]] ; then
+    echo 'Must supply exactly 1 argument specifying the project to publish.'
+    exit 1
+fi
+
+nx build $1 && (cd ./dist/libs/$1 && npm publish)

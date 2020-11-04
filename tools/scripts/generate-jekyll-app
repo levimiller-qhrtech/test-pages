@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [[ $# -ne 1 ]] ; then
+    echo 'Must supply exactly 1 argument specifying the example app to create a Jekyll page for.'
+    exit 1
+fi
+
+# Add Jekyll header to the start of the html file
+TITLE=$(sed -n 's/ *<title>\(.*\)<\/title>/\1/p' docs/$1/index.html)
+echo """\
+---
+layout: none
+title: $TITLE
+---
+" > docs/$1/$1.html
+cat docs/$1/index.html >> docs/$1/$1.html

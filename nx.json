@@ -22,13 +22,5 @@
       }
     }
   },
-  "projects": {
-    "app-example": {
-      "tags": []
-    },
-    "app-example-e2e": {
-      "tags": [],
-      "implicitDependencies": ["app-example"]
-    }
-  }
+  "projects": {}
 }

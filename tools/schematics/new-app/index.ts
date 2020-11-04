@@ -15,7 +15,8 @@ function addReleaseRunCommand(schema: SchematicOptions): Rule {
       options: {
         commands: [
           `nx build --project=${schema.name} --prod --output-path docs/${schema.name} --base-href /test-pages/${schema.name}`,
-          'ngh --dir=docs'
+          `tools/scripts/generate-jekyll-app ${schema.name}`,
+          "ngh --dir=docs"
         ],
         parallel: false
       }
