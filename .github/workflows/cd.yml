@@ -21,8 +21,9 @@ jobs:
         with:
           node-version: 12.16.1
 
+      - run: npm install --production
+
       - run: |
-          npm ci
           git config --global user.email "optdev@qhrtech.com"
           git config --global user.name "QHRLodestoneBot"
 
