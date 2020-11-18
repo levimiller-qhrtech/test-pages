@@ -108,6 +108,8 @@
               "git remote show origin",
               "nx build --project=test-app --prod --output-path docs/test-app --base-href /test-pages/test-app/",
               "tools/scripts/generate-jekyll-app test-app",
+              "pwd",
+              "git status",
               "ngh --dir=docs --no-silent"
             ],
             "parallel": false
