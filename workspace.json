@@ -103,14 +103,9 @@
           "builder": "@nrwl/workspace:run-commands",
           "options": {
             "commands": [
-              "git config user.name",
-              "git config user.email",
-              "git remote show origin",
               "nx build --project=test-app --prod --output-path docs/test-app --base-href /test-pages/test-app/",
               "tools/scripts/generate-jekyll-app test-app",
-              "pwd",
-              "git status",
-              "ngh --dir=docs --no-silent --repo=https://github.com/levimiller-qhrtech/test-pages"
+              "ng deploy --dir=docs --no-build --no-silent"
             ],
             "parallel": false
           }
