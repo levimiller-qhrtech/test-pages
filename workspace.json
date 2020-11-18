@@ -103,9 +103,9 @@
           "builder": "@nrwl/workspace:run-commands",
           "options": {
             "commands": [
-              "pwd",
-              "ls",
-              "git status",
+              "git config user.name",
+              "git config user.email",
+              "git remote show origin",
               "nx build --project=test-app --prod --output-path docs/test-app --base-href /test-pages/test-app/",
               "tools/scripts/generate-jekyll-app test-app",
               "ngh --dir=docs --no-silent"
