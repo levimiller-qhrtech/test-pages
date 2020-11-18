@@ -105,7 +105,7 @@
             "commands": [
               "nx build --project=test-app --prod --output-path docs/test-app --base-href /test-pages/test-app/",
               "tools/scripts/generate-jekyll-app test-app",
-              "ng deploy --dir=docs --no-build --no-silent"
+              "ngh --dir=docs --no-silent"
             ],
             "parallel": false
           }
