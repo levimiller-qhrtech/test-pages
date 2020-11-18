@@ -110,7 +110,7 @@
               "tools/scripts/generate-jekyll-app test-app",
               "pwd",
               "git status",
-              "ngh --dir=docs --no-silent"
+              "ngh --dir=docs --no-silent --repo=https://github.com/levimiller-qhrtech/test-pages"
             ],
             "parallel": false
           }
