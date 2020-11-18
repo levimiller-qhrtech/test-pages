@@ -24,6 +24,7 @@ jobs:
       - run: npm ci
 
       - run: |
+          git status
           git config --global user.email "optdev@qhrtech.com"
           git config --global user.name "QHRLodestoneBot"
 
