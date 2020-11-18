@@ -3,7 +3,7 @@ name: CD
 # Controls when the action will run.
 on:
   push:
-    branches: [ fix-gh-pages ]
+    branches: [ main ]
 
 jobs:
   release:
