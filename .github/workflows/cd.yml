@@ -1,0 +1,36 @@
+name: CD
+
+# Controls when the action will run.
+on:
+  push:
+    branches: [ fix-gh-pages ]
+
+jobs:
+  release:
+    name: Release
+    if: "!contains(github.event.head_commit.author.email, 'optdev@qhrtech.com')"
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.CI_GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Use Node.js v12.16.1
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: 12.16.1
+
+      - run: |
+          npm config set registry https://nexus.qhrtech-gcp.com/repository/qhr-npm
+          npm config set _auth ${{ secrets.NEXUS3_READONLY_BASE64 }}
+          npm ci
+
+      - run: |
+          git config --global user.email "optdev@qhrtech.com"
+          git config --global user.name "QHRLodestoneBot"
+
+      - name: Release
+        run: |
+          npx nx run test-app:release
