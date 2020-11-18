@@ -31,3 +31,5 @@ jobs:
       - name: Release
         run: |
           npx nx run test-app:release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
